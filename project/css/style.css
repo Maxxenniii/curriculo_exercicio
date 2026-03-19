@@ -1,0 +1,176 @@
+/*Reset CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.centraliza{
+     display: flex;
+        justify-content: center;
+
+}
+
+.container {
+    width: 900px;
+    background-color: #96775e;
+    /* efeito de sombra suave */
+    /* 0px deslocamento horizontal */
+    /* 5px deslocamento vertical */
+    /* 10 px - raio de desfoque - quanto maior, mais difusa e suave fica */
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    
+  
+} 
+
+/* seletor ID */
+#main-header {
+    /* função linear gradiente recebe 3 cores mais a inclinação da cor */
+    background: linear-gradient(135deg,#55b638  0%, #02350f 100%);
+    color: white;
+    padding: 30px;
+    /* alinhamento do texto e da imagem */
+    /* organiza os elementos dentro do container em linhas ou colunas */
+    display: flex;
+    flex-direction: row;
+    /* define o espaçamento entre os items do display flex */
+    gap: 10px;
+    align-items: center;
+    border-radius: 8px;
+}
+
+#main-header h1{
+    font-size: 20px;
+    
+}
+
+
+
+#main-header .profile-photo {
+    border-radius: 50%;
+    border: 4px solid rgb(46, 27, 2);
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+address{
+    font-style: italic;
+}
+
+h2{
+    font-size: 1.rem;
+    color: #040c00;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* seletores descendentes */
+
+ol > li{
+    /* list-style - remove o li */
+    list-style: none;
+    /* cria novamento o li */
+    counter-increment: section-counter;
+    background-color: #02350f;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    padding: 25px;
+    border-left: 5px solid #5a9952;
+}
+
+ol > li::before{
+    /* formata a li antes do container pai */
+    content: counter(section-counter);
+    position: absolute;
+    left: -15px;
+    top: -15px;
+    background: #0b7425;
+    color: #f4f4f4;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+p{
+    color: #ffffff;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 3px;
+    border: none !important;
+    border-radius: 0 !important;
+}
+
+
+.py {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-left: 3px;
+}
+
+
+#main-header a .icon {
+    width: 22px;
+    height: 22px;
+    margin-left: 5px;
+}
+
+a {
+    color: #68e615;
+}
+
+h3{
+    color: #c3f3b8;
+    margin-bottom: 8px;
+}
+
+section{
+    background-color: #104410;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+p img:not(.icon) {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-left: 3px;
+}
+
+@media (max-width: 768px) {
+    #main-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .titulo-formacao {
+        font-size: 1.2rem;
+    }
+}
